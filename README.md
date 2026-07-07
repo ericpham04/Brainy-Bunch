@@ -1,7 +1,15 @@
-# Brainy-Bunch
+# Buy Nothing Community App Database
 
-Buy Nothing Community Application
+## Database Lead
+Eric Pham
 
-Created for CSC Software Engineering.
+This folder contains the database deliverables for the Buy Nothing Community App.
 
-
+Contents:
+- database_design.md
+- schema.sql
+- sample_data.sql
+- queries.sql
+- postgres_setup.md
+- backup_restore.md
+- data_dictionary.md
