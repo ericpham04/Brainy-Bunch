@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Notifications{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1 class="mb-4">Notifications</h1>
+
+    <div class="card shadow mb-3">
+
+        <div class="card-body">
+
+            <h5>Request Accepted</h5>
+
+            <p>
+                Sarah accepted your request for
+                <strong>Coffee Table</strong>.
+            </p>
+
+            <small class="text-muted">
+                2 hours ago
+            </small>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow mb-3">
+
+        <div class="card-body">
+
+            <h5>New Item Shared</h5>
+
+            <p>
+                Mike shared a new
+                <strong>Bicycle</strong>.
+            </p>
+
+            <small class="text-muted">
+                Yesterday
+            </small>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h5>Request Declined</h5>
+
+            <p>
+                Emily declined your request for
+                <strong>Desk Lamp</strong>.
+            </p>
+
+            <small class="text-muted">
+                2 days ago
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
