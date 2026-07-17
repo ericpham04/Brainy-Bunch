@@ -4,178 +4,255 @@
 
 {% block content %}
 
-<div class="container">
+<div class="browse-header text-center">
 
-    <div class="text-center mb-5">
+    <h1>Browse Community Items</h1>
 
-        <h1>Items Shared by Your Community</h1>
+    <p>
+        Find something you need from neighbors in your community.
+    </p>
 
-        <p class="text-muted">
+</div>
 
-            Browse items your neighbors are happy to give away.
+<div class="row mb-4">
 
-        </p>
+    <div class="col-md-8">
 
-    </div>
-
-    <!-- Search Bar -->
-
-    <div class="row mb-4">
-
-        <div class="col-md-8">
-
-            <input
-                type="text"
-                class="form-control"
-                placeholder="Search for an item...">
-
-        </div>
-
-        <div class="col-md-4">
-
-            <select class="form-select">
-
-                <option>All Categories</option>
-                <option>Furniture</option>
-                <option>Electronics</option>
-                <option>Kitchen</option>
-                <option>Books</option>
-                <option>Clothing</option>
-
-            </select>
-
-        </div>
+        <input
+            type="text"
+            class="form-control search-box"
+            placeholder="Search for an item...">
 
     </div>
 
-    <div class="row">
+    <div class="col-md-4">
 
-        <!-- Card 1 -->
+        <select class="form-select">
 
-        <div class="col-md-4 mb-4">
+            <option>All Categories</option>
+            <option>Furniture</option>
+            <option>Electronics</option>
+            <option>Kitchen</option>
+            <option>Books</option>
+            <option>Clothing</option>
 
-            <div class="card shadow h-100">
-
-                <img src="https://placehold.co/400x250"
-                     class="card-img-top">
-
-                <div class="card-body">
-
-                    <h4>Coffee Table</h4>
-
-                    <p>
-
-                        Solid wood coffee table in great condition.
-
-                    </p>
-
-                    <span class="badge bg-primary">
-
-                        Furniture
-
-                    </span>
-
-                </div>
-
-                <div class="card-footer bg-white border-0">
-
-                    <a href="{% url 'listing_detail' %}" 
-                       class="btn btn-primary w-100">
-
-                       View Details
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Card 2 -->
-
-        <div class="col-md-4 mb-4">
-
-            <div class="card shadow h-100">
-
-                <img src="https://placehold.co/400x250"
-                     class="card-img-top">
-
-                <div class="card-body">
-
-                    <h4>Desk Lamp</h4>
-
-                    <p>
-
-                        LED lamp with adjustable brightness.
-
-                    </p>
-
-                    <span class="badge bg-success">
-
-                        Electronics
-
-                    </span>
-
-                </div>
-
-                <div class="card-footer bg-white border-0">
-
-                    <button class="btn btn-primary w-100">
-
-                        Request Item
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Card 3 -->
-
-        <div class="col-md-4 mb-4">
-
-            <div class="card shadow h-100">
-
-                <img src="https://placehold.co/400x250"
-                     class="card-img-top">
-
-                <div class="card-body">
-
-                    <h4>Winter Jacket</h4>
-
-                    <p>
-
-                        Men's medium winter coat.
-
-                    </p>
-
-                    <span class="badge bg-warning text-dark">
-
-                        Clothing
-
-                    </span>
-
-                </div>
-
-                <div class="card-footer bg-white border-0">
-
-                    <button class="btn btn-primary w-100">
-
-                        Request Item
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
+        </select>
 
     </div>
 
 </div>
+
+<div class="row">
+
+<div class="empty-state text-center d-none">
+
+    <div class="empty-state-icon">
+        📦
+    </div>
+
+    <h2>No items found yet</h2>
+
+    <p>
+        Try another search or check back soon. Your neighbors may share
+        something new today.
+    </p>
+
+    <a href="{% url 'share' %}" class="btn btn-primary">
+        Share an Item
+    </a>
+
+</div>
+
+    <!-- Card 1 -->
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="card item-card shadow">
+
+            <img src="https://placehold.co/600x400"
+                 class="card-img-top">
+
+            <div class="card-body">
+
+                <span class="badge bg-primary mb-2">
+
+                    Furniture
+
+                </span>
+
+                <h4>Coffee Table</h4>
+
+                <div class="d-flex align-items-center mb-3">
+
+                    <img
+                        src="https://placehold.co/48x48"
+                        class="community-avatar me-2"
+                        alt="Profile picture">
+                
+                    <div>
+                        <p class="mb-0 fw-semibold">Shared by Sarah</p>
+                        <small class="text-muted">Community Member</small>
+                    </div>
+                
+                </div>
+
+                <p>
+
+                    Beautiful solid wood coffee table in excellent condition.
+
+                </p>
+
+                <a href="{% url 'listing_detail' %}"
+
+                   class="btn btn-primary w-100">
+
+                    View Details
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Duplicate this card for more placeholder items -->
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="card item-card shadow">
+
+            <img src="https://placehold.co/600x400"
+                 class="card-img-top">
+
+            <div class="card-body">
+
+                <span class="badge bg-primary mb-2">
+
+                    Sport
+
+                </span>
+
+                <h4>Football</h4>
+
+                <div class="d-flex align-items-center mb-3">
+
+                    <img
+                        src="https://placehold.co/48x48"
+                        class="community-avatar me-2"
+                        alt="Profile picture">
+                
+                    <div>
+                        <p class="mb-0 fw-semibold">Shared by Mike</p>
+                        <small class="text-muted">Community Member</small>
+                    </div>
+                
+                </div>
+
+                <p>
+
+                    Still in the original packaging 
+
+                </p>
+
+                <a href="{% url 'listing_detail' %}"
+
+                   class="btn btn-primary w-100">
+
+                    View Details
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+
+        <div class="card item-card shadow">
+
+            <img src="https://placehold.co/600x400"
+                 class="card-img-top">
+
+            <div class="card-body">
+
+                <span class="badge bg-primary mb-2">
+
+                    Clothing
+
+                </span>
+
+                <h4>Winter Coat</h4>
+
+                <div class="d-flex align-items-center mb-3">
+
+                    <img
+                        src="https://placehold.co/48x48"
+                        class="community-avatar me-2"
+                        alt="Profile picture">
+                
+                    <div>
+                        <p class="mb-0 fw-semibold">Shared by Emily</p>
+                        <small class="text-muted">Community Member</small>
+                    </div>
+                
+                </div>
+
+                <p>
+
+                    Vintage 1970's winter coat
+
+                </p>
+
+                <a href="{% url 'listing_detail' %}"
+
+                   class="btn btn-primary w-100">
+
+                    View Details
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<section class="community-spotlight mt-5">
+
+    <div class="row align-items-center">
+
+        <div class="col-md-8">
+
+            <p class="spotlight-label">
+                Community Spotlight
+            </p>
+
+            <h2>Neighbors helping neighbors</h2>
+
+            <p class="mb-md-0">
+                This week, community members shared furniture, clothing,
+                books, and household supplies that can now help other families.
+            </p>
+
+        </div>
+
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+
+            <a
+                href="{% url 'share' %}"
+                class="btn btn-primary btn-lg">
+
+                Share an Item
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 {% endblock %}
