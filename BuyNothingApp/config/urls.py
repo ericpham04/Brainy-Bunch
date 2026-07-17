@@ -17,6 +17,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from .views import (
+    home,
+    login_view,
+    register,
+    profile,
+    listings,
+    listing_detail,
+    create_listing,
+    notifications,
+)
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+
+    path("", home, name="home"),
+    path("login/", login_view, name="login"),
+    path("register/", register, name="register"),
+    path("profile/", profile, name="profile"),
+    path("listings/", listings, name="listings"),
+    path("listing/", listing_detail, name="listing_detail"),
+    path("share/", create_listing, name="share"),
+    path("notifications/", notifications, name="notifications"),
 ]
