@@ -1,0 +1,156 @@
+body {
+    background: #f5f7ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed) !important;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    color: white !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #ddd !important;
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+}
+
+.btn-primary,
+.btn-success {
+    background: #4f46e5;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    background: #4338ca;
+}
+
+.btn-outline-primary {
+    border-color: #4f46e5;
+    color: #4f46e5;
+}
+
+.btn-outline-primary:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #312e81;
+}
+
+main {
+    min-height: 70vh;
+}
+
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        rgba(79, 70, 229, 0.12),
+        rgba(124, 58, 237, 0.16)
+    );
+    border-radius: 24px;
+    padding: 5rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-label {
+    color: #6d28d9;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 1.5rem auto;
+    color: #4b5563;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.how-it-works-section {
+    margin-bottom: 4rem;
+}
+
+.community-card {
+    padding: 1.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.community-card:hover {
+    transform: translateY(-4px);
+}
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.community-message {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(49, 46, 129, 0.08);
+    margin-bottom: 3rem;
+}
+
+.community-message p {
+    max-width: 650px;
+    margin: 1rem auto 1.75rem;
+    color: #4b5563;
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 3rem 1.25rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}

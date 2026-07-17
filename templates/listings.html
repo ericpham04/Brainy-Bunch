@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block title %}Browse Items{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="text-center mb-5">
+
+        <h1>Items Shared by Your Community</h1>
+
+        <p class="text-muted">
+
+            Browse items your neighbors are happy to give away.
+
+        </p>
+
+    </div>
+
+    <!-- Search Bar -->
+
+    <div class="row mb-4">
+
+        <div class="col-md-8">
+
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Search for an item...">
+
+        </div>
+
+        <div class="col-md-4">
+
+            <select class="form-select">
+
+                <option>All Categories</option>
+                <option>Furniture</option>
+                <option>Electronics</option>
+                <option>Kitchen</option>
+                <option>Books</option>
+                <option>Clothing</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <!-- Card 1 -->
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="https://placehold.co/400x250"
+                     class="card-img-top">
+
+                <div class="card-body">
+
+                    <h4>Coffee Table</h4>
+
+                    <p>
+
+                        Solid wood coffee table in great condition.
+
+                    </p>
+
+                    <span class="badge bg-primary">
+
+                        Furniture
+
+                    </span>
+
+                </div>
+
+                <div class="card-footer bg-white border-0">
+
+                    <a href="{% url 'listing_detail' %}" 
+                       class="btn btn-primary w-100">
+
+                       View Details
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="https://placehold.co/400x250"
+                     class="card-img-top">
+
+                <div class="card-body">
+
+                    <h4>Desk Lamp</h4>
+
+                    <p>
+
+                        LED lamp with adjustable brightness.
+
+                    </p>
+
+                    <span class="badge bg-success">
+
+                        Electronics
+
+                    </span>
+
+                </div>
+
+                <div class="card-footer bg-white border-0">
+
+                    <button class="btn btn-primary w-100">
+
+                        Request Item
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="https://placehold.co/400x250"
+                     class="card-img-top">
+
+                <div class="card-body">
+
+                    <h4>Winter Jacket</h4>
+
+                    <p>
+
+                        Men's medium winter coat.
+
+                    </p>
+
+                    <span class="badge bg-warning text-dark">
+
+                        Clothing
+
+                    </span>
+
+                </div>
+
+                <div class="card-footer bg-white border-0">
+
+                    <button class="btn btn-primary w-100">
+
+                        Request Item
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

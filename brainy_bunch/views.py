@@ -14,3 +14,12 @@ def create_listing(request):
 
 def profile(request):
     return render(request, "profile.html")
+
+def listings(request):
+    return render(request, "listings.html")
+
+def listing_detail(request):
+    return render(request, "listing_detail.html")
+
+def notifications(request):
+    return render(request, "notifications.html")
