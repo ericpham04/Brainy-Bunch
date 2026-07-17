@@ -4,53 +4,187 @@
 
 {% block content %}
 
-<div class="container">
+<section class="profile-header shadow-sm">
 
-    <div class="card shadow">
+    <div class="row align-items-center">
 
-        <div class="card-body">
+        <div class="col-md-auto text-center">
 
-            <div class="text-center">
+            <img
+                src="https://placehold.co/140x140"
+                class="profile-picture"
+                alt="Profile picture">
 
-                <img src="https://placehold.co/150x150"
-                     class="rounded-circle mb-3"
-                     alt="Profile Picture">
+        </div>
 
-                <h2>Your Name</h2>
+        <div class="col-md mt-3 mt-md-0 text-center text-md-start">
 
-                <p class="text-muted">
+            <p class="profile-label">Community Member</p>
 
-                    Community Member
+            <h1 class="mb-2">Your Name</h1>
 
-                </p>
+            <p class="text-muted mb-1">
+                Your Community
+            </p>
+
+            <p class="mb-0">
+                Member since July 2026
+            </p>
+
+        </div>
+
+        <div class="col-md-auto text-center mt-4 mt-md-0">
+
+            <button class="btn btn-outline-primary">
+                Edit Profile
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="profile-stats">
+
+    <div class="row g-3">
+
+        <div class="col-md-4">
+
+            <div class="stat-card text-center shadow-sm">
+
+                <p class="stat-number">3</p>
+
+                <p class="stat-label">Items Shared</p>
 
             </div>
 
-            <hr>
+        </div>
 
-            <div class="row">
+        <div class="col-md-4">
 
-                <div class="col-md-6">
+            <div class="stat-card text-center shadow-sm">
 
-                    <h4>Account Information</h4>
+                <p class="stat-number">2</p>
 
-                    <p><strong>Email:</strong> your@email.com</p>
+                <p class="stat-label">Items Requested</p>
 
-                    <p><strong>Location:</strong> Your Community</p>
+            </div>
 
-                    <p><strong>Member Since:</strong> July 2026</p>
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="stat-card text-center shadow-sm">
+
+                <p class="stat-number">3</p>
+
+                <p class="stat-label">Successful Giveaways</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="profile-section">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+
+        <div>
+
+            <h2 class="mb-1">My Shared Items</h2>
+
+            <p class="text-muted mb-0">
+                Items you have offered to your community.
+            </p>
+
+        </div>
+
+        <a href="{% url 'share' %}" class="btn btn-primary">
+            Share New Item
+        </a>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="card profile-item-card shadow-sm h-100">
+
+                <img
+                    src="https://placehold.co/500x300"
+                    class="card-img-top"
+                    alt="Coffee table">
+
+                <div class="card-body">
+
+                    <span class="badge category-badge mb-2">
+                        Furniture
+                    </span>
+
+                    <h3 class="h5">Coffee Table</h3>
+
+                    <p class="text-muted mb-0">
+                        Available
+                    </p>
 
                 </div>
 
-                <div class="col-md-6">
+            </div>
 
-                    <h4>Community Stats</h4>
+        </div>
 
-                    <p>Items Shared: 3</p>
+        <div class="col-lg-4 col-md-6">
 
-                    <p>Items Requested: 2</p>
+            <div class="card profile-item-card shadow-sm h-100">
 
-                    <p>Successful Giveaways: 3</p>
+                <img
+                    src="https://placehold.co/500x300"
+                    class="card-img-top"
+                    alt="Desk lamp">
+
+                <div class="card-body">
+
+                    <span class="badge category-badge mb-2">
+                        Electronics
+                    </span>
+
+                    <h3 class="h5">Desk Lamp</h3>
+
+                    <p class="text-muted mb-0">
+                        Requested
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="card profile-item-card shadow-sm h-100">
+
+                <img
+                    src="https://placehold.co/500x300"
+                    class="card-img-top"
+                    alt="Winter jacket">
+
+                <div class="card-body">
+
+                    <span class="badge category-badge mb-2">
+                        Clothing
+                    </span>
+
+                    <h3 class="h5">Winter Jacket</h3>
+
+                    <p class="text-muted mb-0">
+                        Given Away
+                    </p>
 
                 </div>
 
@@ -60,66 +194,52 @@
 
     </div>
 
-    <br>
+</section>
 
-    <div class="row">
+<section class="profile-section">
 
-        <div class="col-md-6">
+    <h2>My Requests</h2>
 
-            <div class="card shadow">
+    <p class="text-muted">
+        Track items you have requested from neighbors.
+    </p>
 
-                <div class="card-header bg-primary text-white">
+    <div class="request-summary shadow-sm">
 
-                    My Shared Items
+        <div>
 
-                </div>
+            <h3 class="h5 mb-1">Bicycle</h3>
 
-                <div class="card-body">
-
-                    <ul>
-
-                        <li>Coffee Table</li>
-
-                        <li>Desk Lamp</li>
-
-                        <li>Winter Jacket</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
+            <p class="text-muted mb-0">
+                Request pending
+            </p>
 
         </div>
 
-        <div class="col-md-6">
-
-            <div class="card shadow">
-
-                <div class="card-header bg-success text-white">
-
-                    Requested Items
-
-                </div>
-
-                <div class="card-body">
-
-                    <ul>
-
-                        <li>Bicycle</li>
-
-                        <li>Microwave</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
+        <span class="request-status pending">
+            Pending
+        </span>
 
     </div>
 
-</div>
+    <div class="request-summary shadow-sm">
+
+        <div>
+
+            <h3 class="h5 mb-1">Microwave</h3>
+
+            <p class="text-muted mb-0">
+                Your request was accepted
+            </p>
+
+        </div>
+
+        <span class="request-status accepted">
+            Accepted
+        </span>
+
+    </div>
+
+</section>
 
 {% endblock %}
