@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero-section text-center">
+    <div class="hero-content">
+        <p class="hero-label">Welcome to your neighborhood sharing community</p>
+
+        <h1 class="display-4 fw-bold">
+            Helping Neighbors Help Neighbors
+        </h1>
+
+        <p class="lead hero-description">
+            Share items you no longer need, discover useful items nearby,
+            and build a stronger community together.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{% url 'listings' %}"
+               class="btn btn-primary btn-lg">
+                Browse Community Items
+            </a>
+
+            <a href="{% url 'share' %}"
+               class="btn btn-outline-primary btn-lg">
+                Share an Item
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works-section">
+    <div class="text-center mb-4">
+        <h2>How It Works</h2>
+        <p class="text-muted">
+            Sharing with your community is simple.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card community-card h-100 text-center shadow-sm">
+                <div class="card-body">
+                    <div class="feature-icon">1</div>
+
+                    <h3 class="h5">Browse Items</h3>
+
+                    <p>
+                        Explore useful items that neighbors are giving away.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card community-card h-100 text-center shadow-sm">
+                <div class="card-body">
+                    <div class="feature-icon">2</div>
+
+                    <h3 class="h5">Request What You Need</h3>
+
+                    <p>
+                        View item details and send a simple request to the owner.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card community-card h-100 text-center shadow-sm">
+                <div class="card-body">
+                    <div class="feature-icon">3</div>
+
+                    <h3 class="h5">Share With Others</h3>
+
+                    <p>
+                        Post items you no longer need and help someone nearby.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="community-message text-center">
+    <h2>Small Acts Make a Big Difference</h2>
+
+    <p>
+        Every shared item reduces waste, helps a neighbor, and strengthens
+        your local community.
+    </p>
+
+    <a href="{% url 'share' %}" class="btn btn-primary btn-lg">
+        Share Something Today
+    </a>
+</section>
+
+{% endblock %}
