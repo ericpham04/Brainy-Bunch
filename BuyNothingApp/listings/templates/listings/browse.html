@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+    <title>Browse Community Items</title>
+</head>
+
+<body>
+    <header>
+        <strong>Brainy-Bunch</strong>
+
+        <nav aria-label="Primary navigation">
+            <span>Home</span>
+            <a href="{% url 'listings:browse' %}">Browse</a>
+            <span>Share</span>
+            <span>Notifications</span>
+            <span>Profile</span>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Browse Community Items</h1>
+
+        <p>
+            Find something you need from neighbors in your community.
+        </p>
+
+        <section
+            id="community-listings"
+            aria-label="Available community listings"
+        >
+            {% for listing in listings %}
+                <article
+                    class="community-listing"
+                    data-listing-id="{{ listing.pk }}"
+                >
+                    <h2>{{ listing.title }}</h2>
+
+                    <p class="listing-category">
+                        Category: {{ listing.category }}
+                    </p>
+
+                    <p class="listing-description">
+                        {{ listing.description }}
+                    </p>
+
+                    <p class="listing-owner">
+                        Shared by {{ listing.owner.username }}
+                    </p>
+                </article>
+            {% empty %}
+                <p id="empty-listings-message">
+                    No community items are currently available.
+                </p>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>
