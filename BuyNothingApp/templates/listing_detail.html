@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Item Details{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg">
+
+        <div class="row g-0">
+
+            <div class="col-md-6">
+
+                <img src="https://placehold.co/600x400"
+                     class="img-fluid rounded-start"
+                     alt="Item Image">
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">Coffee Table</h2>
+
+                    <span class="badge bg-primary mb-3">
+                        Furniture
+                    </span>
+
+                    <h5>Description</h5>
+
+                    <p>
+                        Solid wood coffee table in excellent condition.
+                        Perfect for a living room or apartment.
+                    </p>
+
+                    <hr>
+
+                    <p><strong>Condition:</strong> Good</p>
+
+                    <p><strong>Posted By:</strong> Community Member</p>
+
+                    <p><strong>Location:</strong> Atlanta, GA</p>
+
+                    <button class="btn btn-primary w-100 mt-3">
+
+                        Request This Item
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
