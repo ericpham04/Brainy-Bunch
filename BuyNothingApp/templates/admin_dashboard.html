@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="profile-section">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+        <div>
+            <h1>Admin Dashboard</h1>
+            <p class="text-muted">Manage users, listings, approvals, and reports.</p>
+        </div>
+
+        <a href="{% url 'profile' %}" class="btn btn-primary">
+            Back to Profile
+        </a>
+    </div>
+</section>
+
+<section class="profile-section">
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+            <div class="request-summary shadow-sm" style="display: block; text-align: center;">
+                <h2>{{ total_users }}</h2>
+                <p class="text-muted mb-0">Total Users</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="request-summary shadow-sm" style="display: block; text-align: center;">
+                <h2>{{ total_listings }}</h2>
+                <p class="text-muted mb-0">Total Listings</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="request-summary shadow-sm" style="display: block; text-align: center;">
+                <h2>{{ pending_users }}</h2>
+                <p class="text-muted mb-0">Pending Users</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="request-summary shadow-sm" style="display: block; text-align: center;">
+                <h2>{{ reported_listings }}</h2>
+                <p class="text-muted mb-0">Reported Listings</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="profile-section">
+    <h2>Pending User Approvals</h2>
+    <p class="text-muted">Review new members waiting for approval.</p>
+
+    <div class="request-summary shadow-sm">
+        <div>
+            <h3 class="h5 mb-1">Jordan Smith</h3>
+            <p class="text-muted mb-0">Community verification pending</p>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-primary">Approve</button>
+            <button type="button" class="btn btn-outline-danger">Deny</button>
+        </div>
+    </div>
+
+    <div class="request-summary shadow-sm">
+        <div>
+            <h3 class="h5 mb-1">Taylor Brown</h3>
+            <p class="text-muted mb-0">Community verification pending</p>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-primary">Approve</button>
+            <button type="button" class="btn btn-outline-danger">Deny</button>
+        </div>
+    </div>
+</section>
+
+<section class="profile-section">
+    <h2>Reported Listings</h2>
+    <p class="text-muted">Review listings reported by community members.</p>
+
+    <div class="request-summary shadow-sm">
+        <div>
+            <h3 class="h5 mb-1">Damaged Desk Chair</h3>
+            <p class="text-muted mb-0">Reported for misleading condition</p>
+        </div>
+
+        <button type="button" class="btn btn-outline-danger">
+            Remove Listing
+        </button>
+    </div>
+</section>
+{% endblock %}

@@ -23,3 +23,12 @@ def listing_detail(request):
 
 def notifications(request):
     return render(request, "notifications.html")
+
+def admin_dashboard(request):
+    context = {
+        "total_users": 24,
+        "total_listings": 18,
+        "pending_users": 3,
+        "reported_listings": 2,
+    }
+    return render(request, "admin_dashboard.html", context)

@@ -26,6 +26,7 @@ from .views import (
     listing_detail,
     create_listing,
     notifications,
+    admin_dashboard,
 )
 
 urlpatterns = [
@@ -39,4 +40,5 @@ urlpatterns = [
     path("listing/", listing_detail, name="listing_detail"),
     path("share/", create_listing, name="share"),
     path("notifications/", notifications, name="notifications"),
+    path("admin-dashboard/", admin_dashboard, name="admin_dashboard"),
 ]
