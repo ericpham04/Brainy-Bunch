@@ -32,3 +32,15 @@ def admin_dashboard(request):
         "reported_listings": 2,
     }
     return render(request, "admin_dashboard.html", context)
+
+def edit_profile(request):
+    success_message = ""
+
+    if request.method == "POST":
+        success_message = "Verification email has been sent to your email address."
+
+    context = {
+        "success_message": success_message,
+    }
+
+    return render(request, "edit_profile.html", context)
